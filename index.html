@@ -30,11 +30,6 @@
 	<body class="is-loading">
 
 		<!-- Wrapper -->
-			
-			<!-- Leaflet -->
-			 <div id="mapid"></div>
-			 #mapid { height: 180px; }
-			 
 			<div id="wrapper">
 
 				<!-- Main -->
@@ -102,6 +97,11 @@
 
 			</div>
 
+			
+			<!-- Leaflet -->
+			 <div id="mapid"></div>
+			 #mapid { height: 180px; }
+			 var mymap = L.map('mapid').setView([51.505, -0.09], 13);
 
 		<!-- Scripts -->
 			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
