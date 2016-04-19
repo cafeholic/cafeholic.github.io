@@ -100,8 +100,18 @@
 			
 			<!-- Leaflet -->
 			 <div id="mapid"></div>
-			 #mapid { height: 180px; }
-			 var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+			 <script>
+			 	var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+			 	// resize layers control to fit into view.
+		function resizeLayerControl() {
+			var layerControlHeight = document.body.clientHeight - (10 + 50);
+			var layerControl = document.getElementsByClassName('leaflet-control-layers-expanded')[0];
+			layerControl.style.overflowY = 'auto';
+			layerControl.style.maxHeight = layerControlHeight + 'px';
+		}
+		map.on('resize', resizeLayerControl);
+		resizeLayerControl();
+			 </script>
 
 		<!-- Scripts -->
 			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
