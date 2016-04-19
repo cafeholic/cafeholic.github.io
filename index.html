@@ -37,7 +37,8 @@
     			icon: 'coffee',
 			 markerColor: 'red'
 		 });
-		 L.marker([37.545800, 126.918315], {icon: redMarker}).addTo(map);
+		 //L.marker([37.545800, 126.918315], {icon: redMarker}).addTo(map);
+		 L.marker([37.545800, 126.918315], {icon: L.AwesomeMarkers.icon({icon: 'coffee', markerColor: 'orange', prefix: 'fa', iconColor: 'red'}) }).addTo(map);
 		//var marker = L.marker([37.545800, 126.918315], {icon: redMarker}).addTo(map);
 		//marker.bindPopup("<b>앤트러사이트</b><br>마포구 합정동").openPopup();
 		//L.control.layers(baseLayers, overlayLayers, {collapsed: false}).addTo(map);
