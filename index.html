@@ -14,6 +14,10 @@
 	<script src="../assets/proj4-compressed.js"></script>
 	<script src="../assets/proj4leaflet.js"></script>
 	<script src="../assets/Leaflet.KoreanTmsProviders.js"></script>
+	<!-- ICON -->
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+	<link rel="stylesheet" href="../Leaflet.awsome-markers/css/leaflet.awesome-markers.css">
+	<script src="../Leaflet.awsome-markers/js/leaflet.awesome-markers.js"></script>
   <script>
 		var map = L.map('map', {
 			crs: L.Proj.CRS.TMS.Naver,
@@ -29,7 +33,11 @@
 			
 		};
 		
-		var marker = L.marker([37.545800, 126.918315]).addTo(map);
+		var redMarker = L.AwesomeMarkers.icon({
+    			icon: 'coffee',
+			 markerColor: 'red'
+		 });
+		var marker = L.marker([37.545800, 126.918315], {icon: redMarker}).addTo(map);
 		marker.bindPopup("<b>앤트러사이트</b><br>마포구 합정동").openPopup();
 		//L.control.layers(baseLayers, overlayLayers, {collapsed: false}).addTo(map);
 		map.setView([37.529246,126.979916], 7);
