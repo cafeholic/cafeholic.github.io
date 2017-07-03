@@ -32,6 +32,13 @@
 			'Naver Cadastral Map': L.Proj.TileLayer.TMS.provider('NaverMap.Cadastral', null, {opacity : 1.0})
 			
 		};
+	 	 var overlayMaps = {
+   		 "Cafes": cafes
+		};
+	  	L.control.layers(baseLayers, overlayMaps).addTo(map);
+	  
+	        var MiniMap = require('leaflet-minimap');
+		new MiniMap(layer, options).addTo(map);
 		
 		var redMarker = L.AwesomeMarkers.icon({
     			icon: 'coffee',
