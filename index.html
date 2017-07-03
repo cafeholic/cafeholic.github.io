@@ -21,7 +21,6 @@
 	<link rel="stylesheet" href="../dist/leaflet.awesome-markers.css">
 	<script src="../dist/leaflet.awesome-markers.js"></script>
   <script>
-	  	/*
 		var map = L.map('map', {
 			crs: L.Proj.CRS.TMS.Naver,
 			continuousWorld: true,
@@ -35,22 +34,6 @@
 			'Naver Cadastral Map': L.Proj.TileLayer.TMS.provider('NaverMap.Cadastral', null, {opacity : 1.0})
 			
 		};
-		*/
-	  
-	  
-	 	// var overlayMaps = {
-   		// "Cafes": cafes
-		//};
-	  	//L.control.layers(baseLayers, overlayMaps).addTo(map);
-	  
-	        var map = new L.Map('map');
-	  	var baseLayer = new L.Proj.TileLayer.TMS.provider('NaverMap.Street', null, {opacity : 0.6});
-	  	
-	  	map.addLayer(baseLayer);
-		map.setView([37.529246,126.979916], 5);
-	  
-	  	var MinimapLayer = new L.Proj.TileLayer.TMS.provider('NaverMap.Street', null, {opacity : 0.6});
-		var miniMap = new L.Control.MiniMap(MinimapLayer, { toggleDisplay: true }).addTo(map);
 	         
 		var redMarker = L.AwesomeMarkers.icon({
     			icon: 'coffee',
